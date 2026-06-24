@@ -31,7 +31,7 @@ function Recruiter() {
     try {
 
       const res = await axios.get(
-        "http://localhost:8081/api/jobs"
+        "http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/jobs"
       );
 
       setJobs(res.data);
@@ -55,7 +55,7 @@ function Recruiter() {
     try {
 
       await axios.post(
-        "http://localhost:8081/api/jobs",
+        "http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/jobs",
         job
       );
 
@@ -84,7 +84,7 @@ function Recruiter() {
     try {
 
       const res = await axios.get(
-        `http://localhost:8081/api/applications/job/${jobId}`
+        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/job/${jobId}`
       );
 
       setApplications(res.data);
@@ -101,7 +101,7 @@ function Recruiter() {
     try {
 
       await axios.put(
-        `http://localhost:8081/api/applications/${id}/accept`
+        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/${id}/accept`
       );
 
       alert("Applicant Accepted");
@@ -117,7 +117,7 @@ function Recruiter() {
     try {
 
       await axios.put(
-        `http://localhost:8081/api/applications/${id}/reject`
+        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/${id}/reject`
       );
 
       alert("Applicant Rejected");
@@ -132,7 +132,7 @@ function Recruiter() {
     try {
 
       await axios.put(
-        `http://localhost:8081/api/applications/${selectedApplicant.id}/schedule`,
+        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/${selectedApplicant.id}/schedule`,
         interview
       );
 
@@ -364,7 +364,7 @@ function Recruiter() {
 
             {app.resumeFileName && (
               <a
-                href={`http://localhost:8081/uploads/${app.resumeFileName}`}
+                href={`http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/uploads/${app.resumeFileName}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-primary btn-sm me-2"

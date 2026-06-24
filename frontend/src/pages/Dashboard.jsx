@@ -16,7 +16,7 @@ function Dashboard() {
   useEffect(() => {
 
     axios
-      .get("http://localhost:8081/api/dashboard/stats")
+      .get("http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/dashboard/stats")
       .then((res) => setStats(res.data))
       .catch((err) => console.log(err));
 
