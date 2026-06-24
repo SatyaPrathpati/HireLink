@@ -12,9 +12,11 @@ import com.hirelink.hirelink_backend.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://hirelink-recruitment-and-job-portal-khpv.onrender.com"
+})
 public class UserController {
-
     @Autowired
     private UserService userService;
     @Autowired
