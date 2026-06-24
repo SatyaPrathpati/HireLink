@@ -25,7 +25,7 @@ function Profile() {
     if (resume) {
 
       window.open(
-        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/uploads/${resume}`,
+        `https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/uploads/${resume}`,
         "_blank"
       );
 
@@ -87,7 +87,7 @@ function Profile() {
             </button>
 
             <a
-              href={`http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/uploads/${resume}`}
+              href={`https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/uploads/${resume}`}
               download
               className="btn btn-outline-success btn-sm"
             >

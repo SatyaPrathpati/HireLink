@@ -21,7 +21,7 @@ function MyApplications() {
         );
 
         const res = await axios.get(
-          `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/user/${email}`
+          `https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications/user/${email}`
         );
 
         console.log(

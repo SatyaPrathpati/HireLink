@@ -35,7 +35,7 @@ function Jobs() {
         localStorage.getItem("resumeFileName");
 
       await axios.post(
-        "http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications",
+        "https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications",
         {
           userId: 1,
           jobId: jobId,
@@ -96,7 +96,7 @@ function Jobs() {
     try {
 
       await axios.delete(
-        `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/jobs/${id}`
+        `https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/jobs/${id}`
       );
 
       alert("Job Deleted Successfully");
@@ -123,7 +123,7 @@ function Jobs() {
     try {
 
       await axios.put(
-        `http://localhost:8081/api/jobs/${editingJob.id}`,
+        `https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/jobs/${editingJob.id}`,
         editingJob
       );
 

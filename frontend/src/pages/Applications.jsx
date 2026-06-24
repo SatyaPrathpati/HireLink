@@ -8,7 +8,7 @@ function Applications() {
   useEffect(() => {
 
     axios
-      .get("http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications")
+      .get("https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/applications")
       .then((res) => setApplications(res.data))
       .catch((err) => console.log(err));
 

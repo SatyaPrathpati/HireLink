@@ -19,7 +19,7 @@ function ResumeUpload() {
     try {
 
       await axios.post(
-        "http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/resume/upload",
+        "https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/resume/upload",
         formData
       );
 

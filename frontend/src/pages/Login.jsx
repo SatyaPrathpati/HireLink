@@ -11,7 +11,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/users/login",
+        "https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/users/login",
         {
           email,
           password

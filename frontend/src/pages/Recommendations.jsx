@@ -22,7 +22,7 @@ function Recommendations() {
 
         axios
             .get(
-                `http://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/recommendations/${skills}`
+                `https://hirelink-recruitment-and-job-portal-cjrz.onrender.com/api/recommendations/${skills}`
             )
             .then((res) => {
 
