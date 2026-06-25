@@ -14,7 +14,7 @@ import com.hirelink.hirelink_backend.service.UserService;
 @RequestMapping("/api/users")
 @CrossOrigin(origins = {
         "http://localhost:3000",
-        "https://hirelink-recruitment-and-job-portal-khpv.onrender.com"
+        "https://hire-link-eight.vercel.app"
 })
 public class UserController {
     @Autowired

@@ -9,35 +9,38 @@ import com.hirelink.hirelink_backend.repository.JobRepository;
 
 @RestController
 @RequestMapping("/api/dashboard")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+                "http://localhost:3000",
+                "https://hire-link-eight.vercel.app"
+})
 public class DashboardController {
 
-    @Autowired
-    private JobRepository jobRepository;
+        @Autowired
+        private JobRepository jobRepository;
 
-    @Autowired
-    private ApplicationRepository applicationRepository;
+        @Autowired
+        private ApplicationRepository applicationRepository;
 
-    @GetMapping("/stats")
-    public DashboardStats getStats() {
+        @GetMapping("/stats")
+        public DashboardStats getStats() {
 
-        DashboardStats stats = new DashboardStats();
+                DashboardStats stats = new DashboardStats();
 
-        stats.setTotalJobs(
-                jobRepository.count());
+                stats.setTotalJobs(
+                                jobRepository.count());
 
-        stats.setTotalApplications(
-                applicationRepository.count());
+                stats.setTotalApplications(
+                                applicationRepository.count());
 
-        stats.setAcceptedApplications(
-                applicationRepository.countByStatus("ACCEPTED"));
+                stats.setAcceptedApplications(
+                                applicationRepository.countByStatus("ACCEPTED"));
 
-        stats.setRejectedApplications(
-                applicationRepository.countByStatus("REJECTED"));
+                stats.setRejectedApplications(
+                                applicationRepository.countByStatus("REJECTED"));
 
-        stats.setPendingApplications(
-                applicationRepository.countByStatus("APPLIED"));
+                stats.setPendingApplications(
+                                applicationRepository.countByStatus("APPLIED"));
 
-        return stats;
-    }
+                return stats;
+        }
 }

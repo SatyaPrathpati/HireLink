@@ -7,7 +7,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequestMapping("/api/resume")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://hire-link-eight.vercel.app"
+})
 public class ResumeController {
 
     @PostMapping("/upload")

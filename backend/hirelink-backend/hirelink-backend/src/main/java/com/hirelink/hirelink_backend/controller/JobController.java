@@ -10,7 +10,10 @@ import com.hirelink.hirelink_backend.service.JobService;
 
 @RestController
 @RequestMapping("/api/jobs")
-@CrossOrigin("*")
+@CrossOrigin(origins = {
+        "http://localhost:3000",
+        "https://hire-link-eight.vercel.app"
+})
 public class JobController {
 
     @Autowired
