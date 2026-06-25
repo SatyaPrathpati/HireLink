@@ -1,18 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-  const isLoggedIn =
-    localStorage.getItem("isLoggedIn");
-  
-  const role =
-   localStorage.getItem("role");
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const role = localStorage.getItem("role");
 
   const logout = () => {
-
     localStorage.clear();
-
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
@@ -34,35 +31,35 @@ function Navbar() {
           </Link>
 
           {role === "JOB_SEEKER" && (
-  <>
-    <Link className="nav-link" to="/jobs">
-      Jobs
-    </Link>
+            <>
+              <Link className="nav-link" to="/jobs">
+                Jobs
+              </Link>
 
-    <Link className="nav-link" to="/saved-jobs">
-      Saved Jobs
-    </Link>
-    <Link className="nav-link" to="/resume-upload">
-      Resume Upload
-    </Link>
-    <Link className="nav-link" to="/applications">
-      Applications
-    </Link>
-  </>
-)}
+              <Link className="nav-link" to="/saved-jobs">
+                Saved Jobs
+              </Link>
+              <Link className="nav-link" to="/resume-upload">
+                Resume Upload
+              </Link>
+              <Link className="nav-link" to="/applications">
+                Applications
+              </Link>
+            </>
+          )}
 
-  {role === "RECRUITER" && (
-  <>
-    <Link className="nav-link" to="/recruiter">
-      Recruiter
-    </Link>
+          {role === "RECRUITER" && (
+            <>
+              <Link className="nav-link" to="/recruiter">
+                Recruiter
+              </Link>
 
-    <Link className="nav-link" to="/dashboard">
-      Dashboard
-    </Link>
-  </>
-   )
-  }
+              <Link className="nav-link" to="/dashboard">
+                Dashboard
+              </Link>
+            </>
+          )
+          }
 
           {isLoggedIn && (
             <Link className="nav-link" to="/profile">
@@ -79,7 +76,7 @@ function Navbar() {
               <Link className="nav-link" to="/register">
                 Register
               </Link>
-              
+
             </>
           )}
 
