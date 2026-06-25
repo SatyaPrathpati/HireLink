@@ -10,10 +10,6 @@ import com.hirelink.hirelink_backend.service.RecommendationService;
 
 @RestController
 @RequestMapping("/api/recommendations")
-@CrossOrigin(origins = {
-        "http://localhost:3000",
-        "https://hire-link-eight.vercel.app"
-})
 public class RecommendationController {
 
     @Autowired

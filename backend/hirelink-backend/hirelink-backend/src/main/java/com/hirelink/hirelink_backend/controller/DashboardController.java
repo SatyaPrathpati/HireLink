@@ -9,10 +9,6 @@ import com.hirelink.hirelink_backend.repository.JobRepository;
 
 @RestController
 @RequestMapping("/api/dashboard")
-@CrossOrigin(origins = {
-                "http://localhost:3000",
-                "https://hire-link-eight.vercel.app"
-})
 public class DashboardController {
 
         @Autowired

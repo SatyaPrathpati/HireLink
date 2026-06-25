@@ -11,10 +11,6 @@ import com.hirelink.hirelink_backend.model.InterviewRequest;
 
 @RestController
 @RequestMapping("/api/applications")
-@CrossOrigin(origins = {
-                "http://localhost:3000",
-                "https://hire-link-eight.vercel.app"
-})
 public class ApplicationController {
 
         @Autowired

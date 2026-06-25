@@ -12,10 +12,6 @@ import com.hirelink.hirelink_backend.service.UserService;
 
 @RestController
 @RequestMapping("/api/users")
-@CrossOrigin(origins = {
-        "http://localhost:3000",
-        "https://hire-link-eight.vercel.app"
-})
 public class UserController {
     @Autowired
     private UserService userService;
